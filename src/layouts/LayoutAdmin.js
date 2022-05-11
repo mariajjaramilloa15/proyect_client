@@ -21,7 +21,7 @@ export default function LayoutAdmin(props) {
         <Content className="layout-admin__content">
           <h1>Rutas</h1>
         </Content>
-        <Footer className="layout-admin__footer">MERN REACT</Footer> 
+        <Footer className="layout-admin__footer">PROJECT REACT 2022</Footer> 
       </Layout>
     </Layout>
   );

@@ -11,14 +11,14 @@ export default function MenuSider(props){
     return(
         <Sider className="admin-sider" collapsed={menuCollapsed}>
             <Menu theme="dark" mode="inline" defaultSelectedKeys={["/admin"]}>
-                <Menu.Item key="1">
+                <Menu.Item key="/admin">
                     <Link to={"/admin"}>
                         <HomeOutlined />
                         <span className="nav-text">Home</span>
                     </Link>
                 </Menu.Item>
-                <Menu.Item key="2">
-                    <Link to={"/admin/menu-web"}>
+                <Menu.Item key="/admin/login">
+                    <Link to={"/admin/login"}>
                         <MenuOutlined />
                         <span className="nav-text">Menu Web</span>
                     </Link>
