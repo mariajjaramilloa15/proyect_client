@@ -1,29 +1,28 @@
 @import "../../../scss/index.scss";
 
 .menu-top {
-    display: flex;
+  display: flex;
+  button {
+    color: grey;
 
-    button {
-        color: $font-grey-dark;
-
-        &:hover {
-            color: $primary-color;
-        }
-        &:focus,
-        &:active {
-            color: $font-grey-dark;
-        }
+    &:hover {
+      color: grey;
     }
-
-    &__left {
-        &-logo {
-            width: 80px;
-            padding: 0 10px;
-        }
+    &:focus,
+    &:active {
+      color: grey;
     }
+  }
 
-    &__right {
-        position: absolute;
-        right: 0;
+  &__left {
+    &-logo {
+      width: 70px;
+      padding: 0 10px;
     }
+  }
+
+  &__right {
+    position: absolute;
+    right: 0;
+  }
 }

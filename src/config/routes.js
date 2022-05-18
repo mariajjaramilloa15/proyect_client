@@ -2,10 +2,9 @@ import LayoutAdmin from "../layouts/LayoutAdmin";
 import LayoutBasic from "../layouts/LayoutBasic";
 /* Importamos las pages */
 import AdminHome from "../pages/Admin";
-import AdminSignIn from "../pages/Admin/signIn";
+import AdminSignIn from "../pages/Admin/SignIn/SignIn";
 import Home from "../pages/home"
 import LayoutError404 from "../layouts/LayoutError404";
-import Contact from "../pages/contact"
 import error404 from "../pages/error404";
 
 const routesAdmin = [

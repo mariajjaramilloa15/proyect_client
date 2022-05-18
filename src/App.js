@@ -1,14 +1,11 @@
-import "./App.scss";
-import { BrowserRouter as Router, Route, Link, BrowserRouter, Routes } from "react-router-dom";
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import routes from "./config/routes";
-import error404 from "./pages/error404";
-
+import "./App.scss";
 
 export default function App(){
   return (
-    <div>
-    <Router>
+    <BrowserRouter>
       <Routes>
         {routes.map((route, index, error404) => (
           <Route
@@ -17,17 +14,12 @@ export default function App(){
             component={error404}
             element={
               <route.layout>
-                <route.component>
-                <h1>Error 404</h1>
-                <p>Not Found</p>
-                </route.component>
-                <h2>Child component</h2>
+                <route.component />
               </route.layout>
             }
           />
         ))}
       </Routes>
-    </Router>
-    </div>
+    </BrowserRouter>  
   );
 }
