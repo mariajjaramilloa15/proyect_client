@@ -1,4 +1,5 @@
 import React from "react";
+import "../scss/index.scss";
 
 const error404 = () => {
   return (
@@ -8,7 +9,7 @@ const error404 = () => {
           <div className="col">
             <div className="four_zero_four_bg">
               <img
-                src="https://media3.giphy.com/media/VwoJkTfZAUBSU/giphy.gif?cid=ecf05e47limtxig4fjawtlqoypisb2511ydfcpxcfcdnzk8l&rid=giphy.gif&ct=g"
+                src="https://cdn-icons-png.flaticon.com/512/2748/2748558.png"
                 alt=""
               ></img>
             </div>

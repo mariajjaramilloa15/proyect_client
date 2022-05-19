@@ -3,7 +3,7 @@ import { Layout, Tabs } from "antd";
 import Login from "../../../components/AdminComponents/Login";
 import Register from "../../../components/AdminComponents/Register";
 import Logo from "../../../assets/img/png/logo.png";
-import "./SignIn";
+import "./SignIn.scss";
 
 export default function SignIn() {
   const { Content } = Layout;
@@ -12,7 +12,7 @@ export default function SignIn() {
     <Layout className="sign-in">
       <Content className="sign-in__content">
         <h1 className="sign-in__content-logo">
-          <img src={Logo} alt= ""/>
+          <img src={Logo} alt=""/>
         </h1>
         <div className="sign-in__content-tabs">
           <Tabs type="card">
