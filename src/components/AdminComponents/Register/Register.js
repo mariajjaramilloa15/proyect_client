@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Input, Button, Checkbox, notification, Result } from "antd";
+import { Form, Input, Button, Checkbox, notification } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { signUpApi } from "../../../api/user";
 import {
@@ -37,16 +37,16 @@ export default function RegisterForm() {
   };
 
   const inputValidation = (e) => {
-    console.log(formValid)
+    console.log(formValid);
     const { type, name } = e.target;
 
-    if(type === "email") {
+    if (type === "email") {
       setFormValid({ ...formValid, [name]: emailValidation(e.target) });
     }
-    if(type === "password") {
+    if (type === "password") {
       setFormValid({ ...formValid, [name]: minLengthValidation(e.target, 6) });
     }
-    if(type === "checkbox") {
+    if (type === "checkbox") {
       setFormValid({ ...formValid, [name]: e.target.checked });
     }
   };
@@ -59,20 +59,20 @@ export default function RegisterForm() {
     const repeatPasswordVal = inputs.repeatPassword;
     const privacyPolicyVal = inputs.privacyPolicy;
 
-    if (!emailVal || ! passwordVal || !repeatPasswordVal || !privacyPolicyVal){
-      notification["error"] ({
+    if (!emailVal || !passwordVal || !repeatPasswordVal || !privacyPolicyVal) {
+      notification["error"]({
         message: "Todos los campos son obligatorios",
       });
       console.log("Vacios");
     } else {
-      if (passwordVal !== repeatPasswordVal){
+      if (passwordVal !== repeatPasswordVal) {
         notification["error"]({
           message: "Las contraseñas tienen que ser iguales.",
         });
         console.log("Son diferentes");
       } else {
-        const result = await signUpApi (inputs);
-        console.log(result)
+        const result = await signUpApi(inputs);
+        console.log(result);
         if (!result.user) {
           notification["error"]({
             message: result.message,
@@ -90,7 +90,7 @@ export default function RegisterForm() {
   const resetForm = () => {
     const inputs = document.getElementsByTagName("input");
 
-    for (let i=0; i<inputs.length; i++){
+    for (let i = 0; i < inputs.length; i++) {
       inputs[i].classList.remove("success");
       inputs[i].classList.remove("error");
     }
@@ -111,14 +111,14 @@ export default function RegisterForm() {
   };
 
   return (
-    <Form className="register-form" onChange={changeForm}>
+    <Form className='register-form' onChange={changeForm}>
       <Form.Item>
         <Input
           prefix={<UserOutlined style={{ color: "rgba (0,0,0,.25)" }} />}
-          type="email"
-          name="email"
-          placeholder="Correo electronico"
-          className="register-form__input"
+          type='email'
+          name='email'
+          placeholder='Correo electronico'
+          className='register-form__input'
           onChange={inputValidation}
           value={inputs.email}
         />
@@ -126,10 +126,10 @@ export default function RegisterForm() {
       <Form.Item>
         <Input
           prefix={<LockOutlined style={{ color: "rgba (0,0,0,.25)" }} />}
-          type="password"
-          name="password"
-          placeholder="Contraseña"
-          className="register-form__input"
+          type='password'
+          name='password'
+          placeholder='Contraseña'
+          className='register-form__input'
           onChange={inputValidation}
           value={inputs.password}
         />
@@ -137,26 +137,25 @@ export default function RegisterForm() {
       <Form.Item>
         <Input
           prefix={<LockOutlined style={{ color: "rgba (0,0,0,.25)" }} />}
-          type="password"
-          name="repeatPassword"
-          placeholder="Repetir contraseña"
-          className="register-form__input"
+          type='password'
+          name='repeatPassword'
+          placeholder='Repetir contraseña'
+          className='register-form__input'
           onChange={inputValidation}
           value={inputs.repeatPassword}
         />
       </Form.Item>
       <Form.Item>
         <Checkbox
-          name="privacyPolicy"
+          name='privacyPolicy'
           onChange={inputValidation}
-          checked={inputs.privacyPolicy}
-        >
+          checked={inputs.privacyPolicy}>
           He leído y acepto la política de privacidad.
         </Checkbox>
       </Form.Item>
-        <Button onClick={register} className="register-form__button">
-          Crear cuenta
-        </Button>
+      <Button onClick={register} className='register-form__button'>
+        Crear cuenta
+      </Button>
     </Form>
   );
 }
