@@ -7,19 +7,19 @@ export default function LayoutError404(props){
 
         return (
             <Layout>
-                <div className="background">
                  <div className="container">
                     <div className="row">
                         <div className="col">
                             <div align= 'center'>
                                 <img
-                                    src="https://cdn-icons-png.flaticon.com/512/2748/2748558.png"
+                                    src="https://static.vecteezy.com/system/resources/previews/002/416/499/large_2x/404-error-and-page-not-found-illustration-vector.jpg"
                                     alt=""
+                                    width = "" //1357 800
+                                    height = "657"
                                 ></img>
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </Layout>
         );

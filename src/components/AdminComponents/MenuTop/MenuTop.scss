@@ -3,14 +3,14 @@
 .menu-top {
   display: flex;
   button {
-    color: grey;
+    color: black;
 
     &:hover {
-      color: grey;
+      color: black;
     }
     &:focus,
     &:active {
-      color: grey;
+      color: black;
     }
   }
 
