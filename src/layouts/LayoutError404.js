@@ -1,12 +1,15 @@
 import React from "react";
 import { Layout } from "antd";
 import "../scss/index.scss";
+import "../layouts/LayoutError404.scss"
 
 export default function LayoutError404(props){
     const { children } = props;
+    const { Content } = Layout;
 
         return (
             <Layout>
+                
                  <div className="container">
                     <div className="row">
                         <div className="col">

@@ -9,7 +9,6 @@ const error404 = () => {
           <div className="col">
             <div className="four_zero_four_bg">
               <img
-                src="https://static.vecteezy.com/system/resources/previews/002/416/499/large_2x/404-error-and-page-not-found-illustration-vector.jpg"
                 alt=""
               ></img>
             </div>
