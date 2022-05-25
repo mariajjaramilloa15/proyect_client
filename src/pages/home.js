@@ -103,7 +103,7 @@ class home extends React.Component{
         <br /><br />
 
         <Table>
-            <thead><tr><th>Numero</th>
+            <thead><tr><th>NUMERO</th>
             <th>LIBROS</th>
             <th>AUTOR</th>
             <th>CANTIDAD</th>
